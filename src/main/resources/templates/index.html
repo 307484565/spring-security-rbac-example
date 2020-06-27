@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+
+    <center>
+        <p>当前用户</p> <p th:text="${user}"></p>
+        <p>拥有权限</p> <p th:text="${permissions}"></p>
+
+        <p>权限测试</p>
+        <a target="_blank" href="/user/list">权限 user:list</a>
+        <a target="_blank" href="/user/update">权限 user:update</a>
+    </center>
+
+</body>
+</html>
