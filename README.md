@@ -19,4 +19,4 @@ springboot整合spring-security实现RBAC权限控制示例
 
 ## 示例图
 
-![系统架构图](sql/example.png)
+![系统架构图](sql/example.jpg)
