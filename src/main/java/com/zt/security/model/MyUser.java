@@ -8,6 +8,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
 import java.util.List;
 
 @Setter
@@ -24,5 +25,8 @@ public class MyUser {
 
     @TableField(exist = false)
     private List<String> roles;
+
+    @TableField("created_at")
+    private Date createdAt;
 
 }

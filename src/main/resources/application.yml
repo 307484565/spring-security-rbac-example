@@ -7,10 +7,10 @@ spring:
   application:
     name: security-demo
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/security_demo?autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&allowMultiQueries=true&serverTimezone=GMT%2B8
+    url: jdbc:mysql://vmware:3306/security_demo?autoReconnect=true&zeroDateTimeBehavior=convertToNull&useUnicode=true&allowMultiQueries=true&serverTimezone=GMT%2B8
     driver-class-name: com.mysql.cj.jdbc.Driver  # mysql8.0以前使用com.mysql.jdbc.Driver
     username: root
-    password:
+    password: root
     platform: mysql
     #通过这句配置将druid连接池引入到我们的配置中，spring会尽可能判断类型是什么，然后根据情况去匹配驱动类。
     type: com.alibaba.druid.pool.DruidDataSource
@@ -22,3 +22,8 @@ logging:
   level:
     root: info
 
+# token 加密密钥
+token:
+  signingKey: secret
+# token 过期时间，以秒为单位，604800 是 一星期
+  expiration: 604800
